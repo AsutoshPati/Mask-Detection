@@ -45,7 +45,7 @@ def preprocess_image(image: np.ndarray):
 def validate_mask(image: np.ndarray):
     """
     This function predicts the whether mask is present in cropped face image or not. It
-    returns the prediction label(Mask/No Mask) & confidence (in 0 to 1) of prediction.
+    returns the prediction label(Without Mask/With Mask) & confidence (in 0 to 1) of prediction.
 
     Parameters
     ----------
