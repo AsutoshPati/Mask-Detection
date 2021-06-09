@@ -1,9 +1,6 @@
 import cv2
 import mask_validator
-import time
 
-img = cv2.imread('test image path')
+img = cv2.imread('test_image.jpg')
+# use cropped face image
 print(mask_validator.validate_mask(img))
-t1 = time.time()
-print(mask_validator.validate_mask(img))
-print(time.time()-t1)

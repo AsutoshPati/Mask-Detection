@@ -15,8 +15,8 @@ import numpy as np
 import cv2
 import gc
 
-model = models.load_model('model/keras_model.h5')   # load the mask detection model
-labels = ['No Mask', 'Mask']                        # label classes during training
+_model = models.load_model('model/keras_model.h5')   # load the mask detection model
+_labels = ['Without Mask', 'With Mask']              # label classes during training
 
 
 def preprocess_image(image: np.ndarray):
@@ -61,9 +61,8 @@ def validate_mask(image: np.ndarray):
 
     """
     data = preprocess_image(image)
-    prediction = list(model.predict(data)[0])
+    prediction = list(_model.predict(data)[0])
     op_factor = max(prediction)
-    op_class = labels[prediction.index(op_factor)]
+    op_class = _labels[prediction.index(op_factor)]
     gc.collect()
     return op_class, op_factor
-
