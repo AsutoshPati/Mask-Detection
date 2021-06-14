@@ -7,10 +7,14 @@ Just put the mask_validator.py in your project directory to use it and import th
 You can use the example file and image to test the program. 
 
 ## Requirements
-numpy==1.19.5  
-opencv-contrib-python==4.5.1.48  
-opencv-python==4.5.1.48  
-tensorflow-gpu==2.5.0  
+
+> numpy==1.19.5
+
+> opencv-contrib-python==4.5.1.48
+
+> opencv-python==4.5.1.48
+
+>tensorflow-gpu==2.5.0
 
 ## How to use
 ```python
